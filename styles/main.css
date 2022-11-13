@@ -1,6 +1,6 @@
 @font-face {
   font-family: custom-font;
-  src: url(/fonts/Sparky_Stones.ttf);
+  src: url(../fonts/Sparky_Stones.ttf);
 }
 
 /* Para poder fijar el footer al final de la página */
@@ -84,7 +84,7 @@ h1 {
 }
 
 #header {
-  background-image: url(/imgs/header-mobile.png);
+  background-image: url(../imgs/header-mobile.png);
   height: 500px;
   background-position: center;
   background-repeat: no-repeat;
@@ -93,7 +93,7 @@ h1 {
 }
 
 #about-me {
-  background-image: url(/imgs/background1.png);
+  background-image: url(../imgs/background1.png);
   padding: 20px;
 }
 
@@ -125,7 +125,7 @@ h1 {
 }
 
 #experience {
-  background-image: url(/imgs/background3.png);
+  background-image: url(../imgs/background3.png);
   padding: 20px;
 
   text-align: center;
@@ -184,7 +184,7 @@ h1 {
 }
 
 #contact-form {
-  background-image: url(/imgs/background2.png);
+  background-image: url(../imgs/background2.png);
   padding: 20px;
   text-align: center;
 
@@ -283,7 +283,7 @@ textarea {
   }
 
   #header {
-    background-image: url(/imgs/header-pc.png);
+    background-image: url(../imgs/header-pc.png);
   }
 
   #about-me {
