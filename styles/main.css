@@ -1,0 +1,89 @@
+
+.navbar {
+    background-color: blueviolet;
+    padding: 10px 20px;
+  
+    display: flex;
+  }
+  
+  #navbar-links {
+    display: none;
+    font-size: 20px;
+  }
+  
+  #navbar-languages {
+    margin: auto;
+  }
+  
+  .navbar .menu li {
+    margin-right: 15px;
+  }
+  
+  .link {
+    text-decoration: none;
+  }
+  
+  .navbar .icon {
+    width: 20px;
+    height: 20px;
+  
+    margin-right: 10px;
+  
+    position: relative;
+    top: 4px;
+    left: 5px;
+  }
+  
+  #selected-language {
+    border: 3px solid black;
+    border-radius: 25px;
+  }
+  
+  /* No muestra los enlaces si estás en móvil */
+  .navbar .menu {
+    display: flex;
+    margin-right: 30px;
+  }
+
+  /* Esto solo ocurre en PC */
+@media screen and (min-width: 768px) {
+    .navbar {
+      display: flex;
+      justify-content: end;
+      align-items: flex-end;
+  
+      /* Hace el navbar sticky */
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+  
+      /* Hace que pase por encima de todo */
+      z-index: 99999;
+    }
+  
+    .navbar .menu {
+      display: flex;
+    }
+  
+    .navbar .menu .link {
+      color: #fff;
+    }
+  
+    #navbar-links {
+      display: flex;
+    }
+  
+    #navbar-languages {
+      margin: 0;
+      margin-right: 30px;
+    }
+  
+    .navbar .menu .link {
+      transition: color 0.3s linear, font-size 0.3s linear;
+    }
+    .navbar .menu .link:hover {
+      color: red;
+      font-size: 1.1em;
+    }
+}
