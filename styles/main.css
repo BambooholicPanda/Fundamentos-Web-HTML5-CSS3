@@ -1,101 +1,383 @@
+@font-face {
+  font-family: custom-font;
+  src: url(/fonts/Sparky_Stones.ttf);
+}
+
+/* Para poder fijar el footer al final de la página */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  font-family: custom-font;
+}
+
+h1 {
+  font-size: 40px;
+}
 
 .navbar {
-    background-color: blueviolet;
-    padding: 10px 20px;
-  
+  background-color: blueviolet;
+  padding: 10px 20px;
+
+  display: flex;
+}
+
+#navbar-links {
+  display: none;
+  font-size: 20px;
+}
+
+#navbar-languages {
+  margin: auto;
+}
+
+.navbar .menu li {
+  margin-right: 15px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.navbar .icon {
+  width: 20px;
+  height: 20px;
+
+  margin-right: 10px;
+
+  position: relative;
+  top: 4px;
+  left: 5px;
+}
+
+#selected-language {
+  border: 3px solid black;
+  border-radius: 25px;
+}
+
+/* No muestra los enlaces si estás en móvil */
+.navbar .menu {
+  display: flex;
+  margin-right: 30px;
+}
+
+.footer {
+  background-color: blueviolet;
+
+  padding: 10px 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer .icon {
+  width: 50px;
+  height: 50px;
+
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footer .icon:hover {
+  transform: scale(1.3);
+}
+
+#header {
+  background-image: url(/imgs/header-mobile.png);
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#about-me {
+  background-image: url(/imgs/background1.png);
+  padding: 20px;
+}
+
+#about-me .text-container {
+  border-radius: 25px;
+  border: 5px solid rgb(183, 48, 255);
+  background: rgba(60, 60, 60, 0.8);
+  padding: 20px;
+  width: 75%;
+  height: auto;
+
+  text-align: justify;
+  margin: auto;
+}
+
+#about-me .image-container {
+  text-align: center;
+}
+
+#about-me .image-container img {
+  border: 5px solid #555;
+  border-radius: 25px;
+  padding: 10px;
+
+  max-width: 150px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+}
+
+#experience {
+  background-image: url(/imgs/background3.png);
+  padding: 20px;
+
+  text-align: center;
+}
+
+#experience {
+  font-size: 20px;
+}
+
+#experience ul li {
+  margin-bottom: 15px;
+  margin-right: 20px;
+  display: inline-block;
+  padding-top: 20px;
+}
+
+.progress-bar-border {
+  border: 3px solid rgb(183, 48, 255);
+  border-radius: 16px;
+  width: 200px;
+  height: 20px;
+
+  padding: 3px;
+}
+
+.progress-bar {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border-radius: 16px;
+  height: 20px;
+}
+
+#progress-bar-html {
+  /* forwards hace que se quede en el estado final de la animación cuando acaba */
+  animation: progress-bar-html 2s forwards;
+}
+
+#progress-bar-css {
+  animation: progress-bar-css 2s forwards;
+}
+
+#progress-bar-js {
+  animation: progress-bar-js 2s forwards;
+}
+
+#progress-bar-py {
+  animation: progress-bar-py 2s forwards;
+}
+
+#progress-bar-pixart {
+  animation: progress-bar-pixart 2s forwards;
+}
+
+#contact-form {
+  background-image: url(/imgs/background2.png);
+  padding: 20px;
+  text-align: center;
+
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+#contact-form h1 {
+  text-align: center;
+}
+
+#contact-form textarea {
+  width: auto;
+  height: 125px;
+  resize: vertical;
+}
+
+#contact-form ul {
+  display: table;
+  margin: auto;
+}
+
+#contact-form li {
+  display: table-row;
+}
+
+#contact-form ul label,
+input {
+  display: table-cell;
+  padding-right: 10px;
+  font-size: 20px;
+}
+
+#contact-form ul input,
+textarea {
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+#contact-form fieldset {
+  font-size: 20px;
+}
+
+#contact-form input.button {
+  margin-top: 20px;
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+/* Esto solo ocurre en PC */
+@media screen and (min-width: 768px) {
+  .navbar {
     display: flex;
+    justify-content: end;
+    align-items: flex-end;
+
+    /* Hace el navbar sticky */
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    /* Hace que pase por encima de todo */
+    z-index: 99999;
   }
-  
-  #navbar-links {
-    display: none;
-    font-size: 20px;
-  }
-  
-  #navbar-languages {
-    margin: auto;
-  }
-  
-  .navbar .menu li {
-    margin-right: 15px;
-  }
-  
-  .link {
-    text-decoration: none;
-  }
-  
-  .navbar .icon {
-    width: 20px;
-    height: 20px;
-  
-    margin-right: 10px;
-  
-    position: relative;
-    top: 4px;
-    left: 5px;
-  }
-  
-  #selected-language {
-    border: 3px solid black;
-    border-radius: 25px;
-  }
-  
-  /* No muestra los enlaces si estás en móvil */
+
   .navbar .menu {
     display: flex;
+  }
+
+  .navbar .menu .link {
+    color: #fff;
+  }
+
+  #navbar-links {
+    display: flex;
+  }
+
+  #navbar-languages {
+    margin: 0;
     margin-right: 30px;
   }
-  #header {
-    background-image: url(/imgs/header-mobile.png);
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+
+  .navbar .menu .link {
+    transition: color 0.3s linear, font-size 0.3s linear;
+  }
+  .navbar .menu .link:hover {
+    color: red;
+    font-size: 1.1em;
   }
 
+  .main {
+    margin-top: 40px;
+  }
 
-  /* Esto solo ocurre en PC */
-@media screen and (min-width: 768px) {
-    .navbar {
-      display: flex;
-      justify-content: end;
-      align-items: flex-end;
-  
-      /* Hace el navbar sticky */
-      overflow: hidden;
-      position: fixed;
-      top: 0;
-      width: 100%;
-  
-      /* Hace que pase por encima de todo */
-      z-index: 99999;
-    }
-  
-    .navbar .menu {
-      display: flex;
-    }
-  
-    .navbar .menu .link {
-      color: #fff;
-    }
-  
-    #navbar-links {
-      display: flex;
-    }
-  
-    #navbar-languages {
-      margin: 0;
-      margin-right: 30px;
-    }
-  
-    .navbar .menu .link {
-      transition: color 0.3s linear, font-size 0.3s linear;
-    }
-    .navbar .menu .link:hover {
-      color: red;
-      font-size: 1.1em;
-    }
-    #header {
-        background-image: url(/imgs/header-pc.png);
-      }
+  #header {
+    background-image: url(/imgs/header-pc.png);
+  }
+
+  #about-me {
+    text-align: center;
+    height: auto;
+  }
+
+  #about-me .image-container {
+    margin-right: 10px;
+
+    /*position: absolute;*/
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  #about-me .image-container img {
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+  }
+
+  #about-me .text-container {
+    height: 300px;
+    width: 500px;
+    /*position: relative;*/
+    display: inline-block;
+    vertical-align: middle;
+
+    font-size: 20px;
+  }
+
+  #experience {
+    height: auto;
+    background-image: none;
+    background-color: rgb(7, 49, 76);
+  }
+
+  #contact-form {
+    height: auto;
+  }
+}
+
+@keyframes progress-bar-html {
+  from {
+    opacity: 0;
+    width: 10%;
+  }
+  to {
+    opacity: 1;
+    width: 60%;
+  }
+}
+
+@keyframes progress-bar-css {
+  from {
+    opacity: 0;
+    width: 10%;
+  }
+  to {
+    opacity: 1;
+    width: 60%;
+  }
+}
+
+@keyframes progress-bar-js {
+  from {
+    opacity: 0;
+    width: 10%;
+  }
+  to {
+    opacity: 1;
+    width: 15%;
+  }
+}
+
+@keyframes progress-bar-py {
+  from {
+    opacity: 0;
+    width: 10%;
+  }
+  to {
+    opacity: 1;
+    width: 70%;
+  }
+}
+
+@keyframes progress-bar-pixart {
+  from {
+    opacity: 0;
+    width: 10%;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
 }
